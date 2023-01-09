@@ -3,4 +3,4 @@ project(PROG2400_700_Lectures)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(echo echo.cpp)
+add_executable(echo echo/main.cpp)
