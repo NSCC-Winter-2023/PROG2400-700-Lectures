@@ -4,3 +4,4 @@ project(PROG2400_700_Lectures)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(echo echo/main.cpp)
+add_executable(best_practices best_practices/main.cpp)
