@@ -1,11 +1,20 @@
 #include <iostream>
+#include <string>
 
-int main() {
-    char str[] = "hello";
-    char** ptr = (char **)str;
-    int* iptr = (int *)str;
-    std::cout << **ptr << std::endl;
-    std::cout << *iptr << std::endl;
-    std::cout << "Hello World" << std::endl;
+using namespace std::string_literals;
+
+int main(int argc, char* argv[]) {
+
+    // do this!
+    std::cout << "argc: " << argc << std::endl;
+    for (int i = 0; i < argc; ++i) {
+        std::cout << "argv: " << argv[i] << std::endl;
+    }
+
+    // don't do this!
+    auto cmd{""s};
+    std::cout << "Enter a command: ";
+    std::cin >> cmd;
+
     return 0;
 }
