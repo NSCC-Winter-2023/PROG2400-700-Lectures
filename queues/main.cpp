@@ -27,14 +27,14 @@ public:
         m_last = node;
     }
 
-    void pop() {
+    std::string pop() {
         // remove node from start of queue
         Node* node = m_first;
 
         // check for empty queue
         if (m_first == nullptr) {
             // throw exception, display message, etc....
-            return;
+            return "EMPTY QUEUE";
         }
 
         // check for last node in queue
@@ -45,7 +45,12 @@ public:
         // detach from the queue
         m_first = node->m_next;
 
+        // hold data for return
+        std::string data = node->m_data;
+
         delete node;
+
+        return data;
     }
 
     std::string peek() {
